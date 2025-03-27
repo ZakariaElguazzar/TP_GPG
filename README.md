@@ -470,6 +470,7 @@ l'image indique le message reçu d'Ayoub est chiffré et signé
 
 ![alt text](image-14.png)
 
+<<<<<<< HEAD
 • Vérifier la signature d'un fichier précédemment signé par votre voisin 
 
 Vérification avancée dans Thunderbird Si ton voisin t’a envoyé un email signé, Thunderbird vérifiera automatiquement la signature et affichera un message en haut du mail :
@@ -479,5 +480,7 @@ Vérification avancée dans Thunderbird Si ton voisin t’a envoyé un email sig
 ❌ "Signature incorrecte" : L’email a été modifié.
 
 ![alt text](image-14.png)
+=======
+>>>>>>> origin/master
 
 
