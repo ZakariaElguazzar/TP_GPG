@@ -355,4 +355,76 @@ gpg:                using EDDSA key 89115F4A34DE823C29DEACABA719905AA6A960F0
 gpg: Good signature from "Zak Elguaz (ENSET Training) <10test2025@SDIA.ma>" [ultimate]
 gpg: WARNING: not a detached signature; file 'new_message.txt' was NOT verified!
 ```
+1. Envoyez à votre voisin un document signé de votre part (en mettant, bien évidemment, le  mail  de  votre  professeur  en  copie  avec  « Vérification  signature  numérique »  comme objet dudit mail)
+![alt text](image-6.png)
+
+2. Vérifiez la signature d'un document que votre voisin vous a envoyé via email et répondez au précédent mail pour informer votre voisin du résultat de votre vérification, n’oublier pas de mettre le mail de votre professeur en copie.
+#### **Commande :**
+```sh
+gpg --verify myMessage.txt.asc
+```
+#### 📌 **Output :**
+```sh
+gpg: Signature made Wed 26 Mar 2025 11:42:41 PM +00
+gpg:                using RSA key 41E5C55D7D2DF2B35524A722CE1C891D77ECD6EE
+gpg: Good signature from "ayouhen (ENSET Training) <25test2025@SDIA.ma>" [full]
+```
+3. Vérifiez la signature d'un document qui a été modifié après signature. Que se passe-t-il ?
+#### **Commande :**
+```sh
+gpg --verify ModifiedmyMessage.txt.asc
+```
+#### 📌 **Output :**
+```sh
+gpg: CRC error; 2085B4 - 7496F2
+gpg: [don't know]: invalid packet (ctb=66)
+gpg: no signature found
+gpg: the signature could not be verified.
+Please remember that the signature file (.sig or .asc)
+should be the first file given on the command line.
+```
+## 4. Chiffrement des fichiers signés 
+ 
+### 4.1. Chiffrement
+
+#### **Commande :**
+```sh
+ gpg --encrypt --armour -r CE1C891D77ECD6EE new_message.txt.asc
+```
+Envoyer le message chiffré à mon voisin.
+
+![alt text](image-7.png)
+
+4.2. Déchiffrement
+
+#### **Commande :**
+```sh
+gpg --decrypt myMessageEncr.txt.asc.asc
+```
+#### 📌 **Output :**
+
+```sh
+gpg: encrypted with cv25519 key, ID F4BAF5595408FB1C, created 2025-03-26
+      "Zak Elguaz (ENSET Training) <10test2025@SDIA.ma>"
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+wat's cruking cuz
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEQeXFXX0t8rNVJKcizhyJHXfs1u4FAmfkmQwACgkQzhyJHXfs
+1u6dEQv/f2UF1JFWzJFwDKyYZNZEPCRCiZR/O5Pku8aE+iQ0edSrRJLfmDZF/6M6
+j2bNO9ik1YxcXtxFBPPR2iV22f4LRnhmtR4L7J5Bjc5CAcAUOYvwQhHFw1MketHW
+lKM94cWOCkc+wdEeCrpRoVABL+Ug2geDHqdfgun/C41fN8TYTWYtczf+r6LgIvwN
+7o/LhRu56Tcr2FdiB4cwvy8g5kpAE/OvkNyi67ppH5x9cvtPa2DP1T6A39clvb5U
+V8ppJWNn3tq/jkwm1JKd57SJgDmoZzR3TlcMeukb9SgopXHq/VW2TUa00wc4BGqo
+UiHYEQzBikpveaWWqRmbwt3BrSng4IAYZG4V3tIDbaA+8n3UyPp9Vpdq1ll+tZ6L
+TXJ+9+VOms5Zc0+SCcW4X60yvnA68/iIFYewBuzDJcbnwpUdhtzM3niDtTzl485G
+Xm0Y5VY/JJSUolcKT9pRnwlGT5seZFsMo2IhAvJpcAtvsXB2Udy1sbnxqfLKxV7d
+UsFcpwSN
+=JEGq
+-----END PGP SIGNATURE-----
+```
+
+![alt text](image-8.png)
 
