@@ -428,3 +428,47 @@ UsFcpwSN
 
 ![alt text](image-8.png)
 
+## 5. GPG en graphique sous Windows/Linux/MacOS 
+### 5.1 Liste des outils
+
+![alt text](image-9.png)
+
+### 5.2 Thunderbird
+
+• Créer une paire de clés privée/publique
+
+![alt text](<Screenshot from 2025-03-27 01-39-21.png>)
+
+![alt text](<Screenshot from 2025-03-27 01-38-18.png>)
+
+• Importer des clés
+
+Reception du clé:
+
+![alt text](image-12.png)
+
+Importation du clé
+
+![alt text](<Screenshot from 2025-03-27 02-29-30.png>)
+
+Choisir un clé
+
+![alt text](image-10.png)
+
+Accepter la vérification
+
+![alt text](image-11.png)
+
+• Chiffrer un message avec la clé publique du destinataire
+
+chiffrement du message automatiquent en choissisant l'email du récipteur qu'on posséde deja son clé publique.
+
+![alt text](image-13.png)
+
+• Utiliser votre clé privée pour déchiffrer un message reçu (que votre voisin a précédemment chiffré avec votre clé publique) et signer un fichier.
+l'image indique le message reçu d'Ayoub est chiffré et signé
+
+![alt text](image-14.png)
+
+
+
